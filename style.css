@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    height: 100vh;
+    background-color: #006442;
+}
+
+header{
+    border: 1px solid red;
+    height: 10%;
+    margin-bottom: calc(.01*100vh);
+    display: flex;
+    align-items: center;
+}
+
+#startGameBtn{
+    background-color: black;
+    font-size: calc(.2*10vh);
+    border-radius: 10%;
+    padding: 0.5rem 1rem;
+}
+
+#title{
+    background-color: black;
+    margin: 0 auto;
+    font-size: calc(.5*10vh);
+    padding: 0.5rem 1rem;
+    color: red;
+
+}
+
+.dealerContainer{
+    border: 1px dotted white;
+    height: 33.33%;
+    margin-bottom: calc(.01*100vh);
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#dealerStatsContainer{
+    border: 6px solid black;
+    border-radius: 25%;
+    width: calc(.7*33.33vh);
+    height: calc(.7*33.33vh);
+    margin-left: auto;
+    margin-right: calc(.15*33.33vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(.60*.15*33.33vh);
+}
+
+#dealerCardsContainer{
+    border: 6px solid black;
+    width: calc(.7*100vw);
+    height: calc(.8*33.33vh);
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+#dealerCardsContainer img{
+    height: 90%;
+    margin-left: calc(.005*70vw);
+}
+
+.messaging{
+    border: 10px solid white;
+    height: 10%;
+    margin-bottom: calc(.01*100vh); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(.7*10vh);
+}
+
+.playerContainer{
+    border: 1px dotted white;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+}
+
+#playerStatsContainer{
+    border: 6px solid black;
+    border-radius: 25%;
+    width: calc(.7*33.33vh);
+    height: calc(.7*33.33vh);
+    margin-right: auto;
+    margin-left: calc(.15*33.33vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(.60*.15*33.33vh)
+}
+
+#playerCardsContainer{
+    border: 6px solid black;
+    width: calc(.7*100vw);
+    height: calc(.8*33.33vh);
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#playerCardsContainer img{
+    height: 90%;
+    margin-right: calc(.005*70vw);
+}
