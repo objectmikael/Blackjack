@@ -8,7 +8,6 @@ body{
 }
 
 header{
-    border: 1px solid red;
     height: 10%;
     margin-bottom: calc(.01*100vh);
     display: flex;
@@ -21,6 +20,9 @@ header{
     border-radius: 10%;
     padding: 0.5rem 1rem;
 }
+#startGameBtn:disabled{
+    opacity: 0.4;
+}
 
 #title{
     background-color: black;
@@ -32,7 +34,6 @@ header{
 }
 
 .dealerContainer{
-    border: 1px dotted white;
     height: 33.33%;
     margin-bottom: calc(.01*100vh);
     display: flex;
@@ -54,7 +55,7 @@ header{
 }
 
 #dealerCardsContainer{
-    border: 6px solid black;
+    /* border: 6px solid black; */
     width: calc(.7*100vw);
     height: calc(.8*33.33vh);
     margin-left: auto;
@@ -79,7 +80,6 @@ header{
 }
 
 .playerContainer{
-    border: 1px dotted white;
     height: 33.33%;
     display: flex;
     align-items: center;
@@ -95,11 +95,35 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     font-size: calc(.60*.15*33.33vh)
+}
+#playerSum{
+    width: 100%;
+    text-align: center;
+}
+#hit{
+    background-color: green;
+    font-size: calc(.18*10vh);
+    border-radius: 10%;
+    padding: 0.25rem 0.5rem;
+    margin-right: calc(.01*100vh);
+    visibility: hidden;
+}
+#stand{
+    background-color: red;
+    font-size: calc(.18*10vh);
+    border-radius: 10%;
+    padding: 0.25rem 0.5rem;
+    visibility: hidden;
+}
+#hit:disabled,
+#stand:disabled{
+    opacity: 0.4;
 }
 
 #playerCardsContainer{
-    border: 6px solid black;
+    /* border: 6px solid black; */
     width: calc(.7*100vw);
     height: calc(.8*33.33vh);
     margin-right: auto;
