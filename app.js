@@ -69,7 +69,7 @@ function firstCard(){
     debugger
     let dealtCardImg = document.createElement("img")
     let dealtCard = deck.shift()
-    dealtCardImg.setAttribute("src", `/Resources/cards/${dealtCard}.png`)
+    dealtCardImg.setAttribute("src", `Resources/cards/${dealtCard}.png`)
     playerCardsContainer.append(dealtCardImg)
 
     //determine card value 
@@ -97,7 +97,7 @@ function secondCard(){
     let dealtCard = deck.shift()
     hiddenCard = dealtCard
     dealtCardImg.setAttribute("id", "hiddenCard")
-    dealtCardImg.setAttribute("src", `/Resources/cards/BACK.png`)
+    dealtCardImg.setAttribute("src", `Resources/cards/BACK.png`)
     dealerCardsContainer.append(dealtCardImg)
 
     //determine card value
@@ -118,7 +118,7 @@ function secondCard(){
 function thirdCard(){
     let dealtCardImg = document.createElement("img")
     let dealtCard = deck.shift()
-    dealtCardImg.setAttribute("src", `/Resources/cards/${dealtCard}.png`)
+    dealtCardImg.setAttribute("src", `Resources/cards/${dealtCard}.png`)
     playerCardsContainer.append(dealtCardImg)
     
     //determine card value
@@ -145,7 +145,7 @@ function thirdCard(){
 function fourthCard(){
     let dealtCardImg = document.createElement("img")
     let dealtCard = deck.shift()
-    dealtCardImg.setAttribute("src", `/Resources/cards/${dealtCard}.png`)
+    dealtCardImg.setAttribute("src", `Resources/cards/${dealtCard}.png`)
     dealerCardsContainer.append(dealtCardImg)
 
     //determine card value
@@ -171,7 +171,7 @@ function fourthCard(){
 function checkForBlackjack(){
     if (dealerSum === 21 && playerSum !==21){
         let mysteryCard = document.getElementById("hiddenCard")
-        mysteryCard.setAttribute("src",  `/Resources/cards/${hiddenCard}.png` )
+        mysteryCard.setAttribute("src",  `Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}`
         messagingEl.innerHTML = "Dealer - Blackjack"
         let winning = -betSize
@@ -181,7 +181,7 @@ function checkForBlackjack(){
     } else if (dealerSum !== 21 && playerSum ===21){
         messagingEl.innerHTML = "WINNER - Blackjack!!!"
         let mysteryCard = document.getElementById("hiddenCard")
-        mysteryCard.setAttribute("src",  `/Resources/cards/${hiddenCard}.png` )
+        mysteryCard.setAttribute("src",  `Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}`
         let winning = 1.5*betSize
         bankrollAmount += winning
@@ -189,7 +189,7 @@ function checkForBlackjack(){
         setTimeout(continuePlay, 2000)
         } else if(dealerSum === 21 && playerSum ===21){
         let mysteryCard = document.getElementById("hiddenCard")
-        mysteryCard.setAttribute("src",  `/Resources/cards/${hiddenCard}.png` )
+        mysteryCard.setAttribute("src",  `Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}`
         messagingEl.innerHTML = "PUSH"
         setTimeout(continuePlay, 2000)
@@ -204,7 +204,7 @@ function checkForBlackjack(){
 function hit(){
     let dealtCardImg = document.createElement("img")
     let dealtCard = deck.shift()
-    dealtCardImg.setAttribute("src", `/Resources/cards/${dealtCard}.png`)
+    dealtCardImg.setAttribute("src", `Resources/cards/${dealtCard}.png`)
     playerCardsContainer.append(dealtCardImg)
 
     //determine card value
@@ -231,7 +231,7 @@ function hit(){
 function checkForPlayerBust (){
     if(playerSum > 21){
         let mysteryCard = document.getElementById("hiddenCard")
-        mysteryCard.setAttribute("src",  `/Resources/cards/${hiddenCard}.png` )
+        mysteryCard.setAttribute("src",  `Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}` 
         messagingEl.innerHTML = "Dealer win, you bust"
         let winning = -betSize
@@ -248,7 +248,7 @@ function stand(){
     standBtn.disabled = true;
 
     let mysteryCard = document.getElementById("hiddenCard")
-    mysteryCard.setAttribute("src",  `/Resources/cards/${hiddenCard}.png` )
+    mysteryCard.setAttribute("src",  `Resources/cards/${hiddenCard}.png` )
     document.querySelector("img").style.visibility = "visible"
     dealerSumEl.innerHTML = `${dealerSum}` 
 
@@ -262,7 +262,7 @@ function dealerTakeACard(){
     while (dealerSum < 17){
         let dealtCardImg = document.createElement("img")
         let dealtCard = deck.shift()
-        dealtCardImg.setAttribute("src", `/Resources/cards/${dealtCard}.png`)
+        dealtCardImg.setAttribute("src", `Resources/cards/${dealtCard}.png`)
         dealerCardsContainer.append(dealtCardImg)
         
         //determine card value   
