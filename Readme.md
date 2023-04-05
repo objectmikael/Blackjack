@@ -1,6 +1,10 @@
 # BLACKJACK
 
 <br>
+
+[Click link to play](https://objectmikael.github.io/Blackjack/)
+
+<br>
 <hr>
 
 ## Pseudocode
