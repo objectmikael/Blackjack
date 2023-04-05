@@ -46,7 +46,7 @@ function start(){
 
 function createDeck(){
     let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-    let suits = ["S", "D", "H"] //, "C", "S", "D", "H", "C", "S", "D", "H", "C"
+    let suits = ["S", "D", "H", "C", "S", "D", "H", "C", "S", "D", "H", "C"] 
 
     suits.forEach ((suit) => {
         values.forEach((card) => {
@@ -312,7 +312,8 @@ function compareScores(){
 }
 
 function continuePlay(){
-    if (hitBtn.disabled = true && deck.length <=20){
+    debugger
+    if (hitBtn.disabled === true && deck.length <=20){
         setTimeout(function (){
             dealerCardsContainer.innerHTML = ""
             playerCardsContainer.innerHTML = ""
