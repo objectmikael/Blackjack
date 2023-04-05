@@ -4,6 +4,8 @@ let playerSum = 0
 let dealerSum = 0
 let aceTallyPlayer
 let aceTallyDealer
+let bankrollAmount = 1000
+let betSize
 
 const startBtn = document.getElementById("startGameBtn")
 const startBtnEl = document.getElementById("startGameBtn").addEventListener("click", init);
@@ -22,8 +24,11 @@ const standBtn = document.getElementById("stand")
 const hitBtnEl = document.getElementById("hit").addEventListener("click", hit)
 const standBtnEl = document.getElementById("stand").addEventListener("click", stand)
 
+const bankrollEl = document.getElementById("bankroll")
+
 function init(){
     startBtn.disabled = true
+    bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
     shuffle()
     start()
 }
@@ -31,8 +36,10 @@ function init(){
 function start(){
     aceTallyPlayer = 0
     aceTallyDealer = 0
-    hitBtn.disabled = false;
-    standBtn.disabled = false;
+    bankrollAmount = bankrollAmount
+    betSize = 50
+    hitBtn.disabled = false
+    standBtn.disabled = false
     firstCard()
 }
 
@@ -166,12 +173,18 @@ function checkForBlackjack(){
         mysteryCard.setAttribute("src",  `../Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}`
         messagingEl.innerHTML = "Dealer - Blackjack"
+        let winning = -betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         setTimeout(continuePlay, 2000)
     } else if (dealerSum !== 21 && playerSum ===21){
         messagingEl.innerHTML = "WINNER - Blackjack!!!"
         let mysteryCard = document.getElementById("hiddenCard")
         mysteryCard.setAttribute("src",  `../Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}`
+        let winning = 1.5*betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         setTimeout(continuePlay, 2000)
         } else if(dealerSum === 21 && playerSum ===21){
         let mysteryCard = document.getElementById("hiddenCard")
@@ -220,6 +233,9 @@ function checkForPlayerBust (){
         mysteryCard.setAttribute("src",  `../Resources/cards/${hiddenCard}.png` )
         dealerSumEl.innerHTML = `${dealerSum}` 
         messagingEl.innerHTML = "Dealer win, you bust"
+        let winning = -betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         hitBtn.disabled = true;
         standBtn.disabled = true;
         setTimeout(continuePlay, 2000)
@@ -272,12 +288,21 @@ function dealerTakeACard(){
 function compareScores(){
     if(playerSum <21 && dealerSum > playerSum && dealerSum < 22){
         messagingEl.innerHTML = "Dealer win"
+        let winning = -betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         setTimeout(continuePlay, 2000)
     } else if (playerSum <=21 && dealerSum < playerSum){
         messagingEl.innerHTML = "YOU WIN"
+        let winning = betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         setTimeout(continuePlay, 2000)
     } else if (dealerSum>21) {
         messagingEl.innerHTML = "Dealer BUST! YOU WIN"
+        let winning = betSize
+        bankrollAmount += winning
+        bankrollEl.innerHTML = `Bank = $${bankrollAmount}`
         setTimeout(continuePlay, 2000)
     } else{
         messagingEl.innerHTML = "PUSH"

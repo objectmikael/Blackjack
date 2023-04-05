@@ -98,7 +98,8 @@ header{
     flex-wrap: wrap;
     font-size: calc(.60*.15*33.33vh)
 }
-#playerSum{
+
+#bankroll, #playerSum{
     width: 100%;
     text-align: center;
 }

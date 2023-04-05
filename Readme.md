@@ -44,5 +44,32 @@
 <br>
 <hr>
 
+## Tech Stack 
+<img src="Resources/Icons/html5.svg" width="50"> <img src="Resources/Icons/css3.svg" width="50"> <img src="Resources/Icons/javascript.svg" width="50"> <img src="Resources/Icons/figma.svg" width="50">
+
+<br>
+<hr>
+
 ## Wireframe <br>
 <kbd><img src="Resources/Gameplay Window.png" width="300"></kbd>
+
+<br>
+<hr>
+
+## Gameplay Snapshots
+- v1.0 <br>
+<kbd><img src="Resources/v1_Gameplay_Start.png" width="300" style="border: 1px solid black"></kbd>
+<kbd><img src="Resources/v1_Gameplay_Deal.png" width="300" style="border: 1px solid black"></kbd>
+<kbd><img src="Resources/v1_Gameplay_Message.png" width="300" style="border: 1px solid black"></kbd>
+<kbd><img src="Resources/v1_Gameplay_Endgame.png" width="300" style="border: 1px solid black"></kbd>
+
+<br>
+<hr>
+
+## Future Iterations
+
+- Implement split logic, which allows a player to treat a dealt hand with matching cards as two seperate hands 
+- Implement player controlled betting with a bet slide that controls the bet amount per hand 
+    - **BONUS**: Double-down logic which allows a player to maximize potential winnings 
+- In-game celebration for player Blackjack
+- Refactor code to minimize the total lines of code
