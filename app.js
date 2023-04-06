@@ -66,7 +66,6 @@ function shuffle(){
 }
 
 function firstCard(){
-    debugger
     let dealtCardImg = document.createElement("img")
     let dealtCard = deck.shift()
     dealtCardImg.setAttribute("src", `./Resources/cards/${dealtCard}.png`)
@@ -312,7 +311,6 @@ function compareScores(){
 }
 
 function continuePlay(){
-    debugger
     if (hitBtn.disabled === true && deck.length <=20){
         setTimeout(function (){
             dealerCardsContainer.innerHTML = ""
